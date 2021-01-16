@@ -1,0 +1,16 @@
+{% extends 'myapp/base.html' %}
+{% block title %}Registration{%endblock%}
+
+{%block body%}
+  <form enctype='multipart/form-data' method="post">
+    {%csrf_token%}
+    {%if registered%}
+      <h2>You have registered successfully!</h2>
+    {% else %}
+      <h2>Register Here</h2>
+      {{user_info.as_p}}
+      {{more_info.as_p}}
+      <input type="submit" class='btn btn-primary' value="SUBMIT">
+    {%endif%}
+  </form>
+{%endblock%}

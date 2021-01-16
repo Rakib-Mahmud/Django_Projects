@@ -1,0 +1,11 @@
+{%extends 'myapp/base.html'%}
+{%block title%}My Profile{%endblock%}
+{%load static%}
+
+{%block body%}
+<h2>{{username}}, your information is given below:</h2>
+<h3>Name : {{username|title}}</h3><br>
+<h3>Email : {{email}}</h3><br>
+<h3>Portfolio : {{portfolio}}</h3><br>
+<img src="{{dp}}"/ width=400px height=500px>
+{%endblock%}
